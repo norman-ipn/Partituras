@@ -1,9 +1,10 @@
-sr      = 44100
-kr      = 4410
-ksmps   = 10
-nchnls  = 1
+sr      = 44100   ; frecuencia de muestra
+kr      = 4410    ; controla la velocidad
+ksmps   = 10      ; numero de frecuencia en un periodo
+nchnls  = 1       ; numero de canales
 
-      instr 001
-a1        oscil  10000, 440, 1
+       instr 001         ;Instrumento 001 esta iniciando
+a1        oscil  10000, 440, 1   
           out    a1
-      endin
+      endin              ;Fin de instrumento
+;Este es un comentario. Inicia con ';'.
