@@ -8,3 +8,6 @@ a1        oscil  10000, 440, 1
           out    a1
       endin              ;Fin de instrumento
 ;Este es un comentario. Inicia con ';'.
+
+;PARA COMPILAR ESTE ARCHIVO ESCRIBIMOS EN LA TERMINAL  csound estudio1.orc estudio1.sco
+;Observe que se compilaran dos tipos de archivos, el .orc y el .sco, esto generara un archivo .wav
