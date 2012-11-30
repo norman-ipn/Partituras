@@ -1,0 +1,42 @@
+#include "funciones.h"
+
+int escribir_encabezado(FILE *fp){
+	fprintf(fp ,"\\version \"2.14.2\"\n");
+	fprintf(fp ,"\\relative c'{\n");
+
+	return 0;
+}
+
+int escribir_piePagina(FILE *fp){
+	fprintf(fp ,"\n}");
+	return 0;
+}
+
+int escribirTiempo(FILE *fp, char *cadena){
+	fprintf(fp, cadena);	
+}
+
+int escribir(FILE *fp, char *cadena){
+	
+	int result = strncmp(cadena,"sol",100);
+
+	if(strncmp(cadena,"sol",100) == 0){
+		fprintf(fp, "g ");
+	}else if(strncmp(cadena,"fa",100) == 0){
+		fprintf(fp, "f ");
+	}else if(strncmp(cadena,"mi",100) == 0){
+		fprintf(fp, "e ");	
+	}else if(strncmp(cadena,"re",100) == 0){
+		fprintf(fp, "d ");	
+	}else if(strncmp(cadena,"do",100) == 0){
+		fprintf(fp, "c ");	
+	}else if(strncmp(cadena,"si",100) == 0){
+		fprintf(fp, "b ");	
+	}else if(strncmp(cadena,"la",100) == 0){
+		fprintf(fp, "a ");	
+	}else{
+		fprintf(fp, cadena);		
+	}
+	
+	return 0;
+}

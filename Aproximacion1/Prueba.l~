@@ -1,0 +1,5 @@
+\version "2.14.2"
+\relative c'{
+	c  e  g  e f e g
+	d  f  b  d
+}
