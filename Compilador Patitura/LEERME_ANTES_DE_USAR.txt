@@ -1,0 +1,66 @@
+Instrucciones y Manual de uso.
+
+El siguiente programa tiene la finalidad de 2 cosas importantes:
+
+1) Un compilador de partituras con audio.
+2) Utilizar herramientas como bison y flex.
+
+REQUISITOS:
+
+	a) Para llevar acabo con éxito la compilación y ejecución del programa
+		mediante la palabra make desde la consola es necesario tener instalado
+		los siguientes programas:
+
+			$ sudo apt-get install bison
+			$ sudo apt-get install lilypond
+			$ sudo apt-get install csound
+			$ sudo apt-get install flex
+
+		De lo contrario, lo unico que tendremos es error de inexistencia de libs.
+
+	b) Tener descompresado el archivo Partituras.tar.gz con:
+
+			$ tar -xf Partituras.tar.gz
+			$ cd Partituras
+			$ cd Compilador_Partituras
+			
+		Y aquí unicamente tenemos que tener 7 archivos cuyos nombres son:
+		acorde.txt  analizador_acorde.l  gramatica_acorde.y  LEERME_ANTES_DE_USAR.txt libpart.c  libpart.h  Makefile
+
+USO:
+
+	1) Para compilar el acorde defaul unicamente teclearemos "make" y nos generará el sonido y al
+		finalizar veremos su partitura.
+	2) Si se desea editar el acorde teclearemos "make editar" y nos aparecerá sobre consola un editor
+		vi y el acorde por defaul.
+
+		OJO: el programa solo detecta acordes con DENOMINACIÓN LITERAL, esto es:
+
+		% Cada nota tiene asignado una letra en espcifico como se muestra acontinuación
+		% do, re, mi, fa, sol, la, si (según el sistema latino de notación).
+		& c,  d,  e,   f,  g,   a,  b (según el sistema inglés de notación musical, también llamado denominación literal).
+
+		Si se desea agregar una octava sobre la nota unicamente pondremos el número a 2^n -1<n<4 n es entero.
+
+		Ejemplo:
+
+				Octava de do.
+					2³ = 8
+					Escribiremos en el acorde c8
+				Octava de do en tiempo 1.
+					2¹ = 2
+					Escribiremos en el acorde c2 
+
+	3) Para ver el acorde fuente generado por lilypondo teclearemos "make mostrar_fuente".
+
+	4) Para recompilar al editar volvemos a teclear "make".
+
+	5) Para eliminar todo y dejar como estaba al incio "make clean"
+	
+	6) En caso de haber cerrado el pdf y se desea volver a ver la partitura genera, teclearemos "make partitura".
+
+	IMPORTANTE: para que funcionen correctamente los paso 3) y 6) deberemos tener por lo menos una vez compilado 
+	con la el comando make, esto debido, a que al no tener generados esos archivos, nos lanzará un error de violación.
+
+Espero este programa sea de utilidad y cualquier duda se puede contactar y explicar el código, gracias.
+>>>>> Barrera López Erick 2CM5 "Escuela Superior de Computo". <<<<<
