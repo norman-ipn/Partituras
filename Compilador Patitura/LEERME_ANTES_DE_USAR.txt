@@ -63,4 +63,3 @@ USO:
 	con la el comando make, esto debido, a que al no tener generados esos archivos, nos lanzará un error de violación.
 
 Espero este programa sea de utilidad y cualquier duda se puede contactar y explicar el código, gracias.
->>>>> Barrera López Erick 2CM5 "Escuela Superior de Computo". <<<<<
